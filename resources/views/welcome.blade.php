@@ -25,7 +25,35 @@
 </head>
 <body>
     <div id="root"></div>
-        <script src="{{ asset('js/app.js') }}"></script>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ asset('/surepass/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('/surepass/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('/surepass/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('/surepass/vendor/landing/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('/surepass/vendor/landing/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('/surepass/vendor/landing/waypoints/jquery.waypoints.min.js') }}"></script>
+
+    <!-- Main JS File -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    
+    <!-- Landing JS File -->
+    <script src="{{ asset('/surepass/vendor/landing/js/main.js') }}"></script>
+
+    <script type="text/javascript"  src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
+    <script>
+      $(document).ready(function() {
+        $('#example').DataTable({
+          "processing": true,
+          "serverSide": true,
+          buttons: [
+          { extend: 'copy', text: 'Copy to clipboard' }
+      ]
+      });
+  } );
+    </script>
 
 </body>
 </html>

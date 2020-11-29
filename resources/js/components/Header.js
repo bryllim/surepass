@@ -3,21 +3,6 @@ import ReactDOM from 'react-dom';
 import logo from '../../../public/surepass/img/landing/logo.png'
 
 export default class Header extends Component {
-    // constructor(){
-    //     super();
-    //     this.state = {
-    //         items:[]
-    //     }
-    // }
-
-    // componentDidMount(){
-    //     axios.get('api/household').then(
-    //         response=>{
-    //             const items = response.data;
-    //             this.setState({ items });
-    //         }
-    //     );
-    // }
     
     render() {
         return (
@@ -40,7 +25,3 @@ export default class Header extends Component {
     );
     }
 };
-
-if (document.getElementById('headerComponent')) {
-    ReactDOM.render(<Header />, document.getElementById('headheaderComponenter'));
-}
