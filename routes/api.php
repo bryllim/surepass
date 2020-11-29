@@ -3,6 +3,11 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\API\HouseholdController;
+use App\Http\Controllers\API\IndividualController;
+use App\Http\Controllers\API\RoomController;
+use App\Http\Controllers\API\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +22,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResources([
+    'user' => UserController::class,
+    'household' => HouseholdController::class,
+    'individual' => IndividualController::class,
+    'room' => RoomController::class
+]);
